@@ -5,13 +5,19 @@ from .models import (
     Pessoa,
     Parametros,
     MovRotativo,
-    Mensalista
+    Mensalista,
+    MovMensalista
     )
 
 
 class MovRotativoAdmin(admin.ModelAdmin):
     list_display = (
         "checkin", "checkout", "valor_hora", "veiculo", "horas_total", "total", "pago")
+    
+
+
+class MovMensalistaAdmin(admin.ModelAdmin):
+    list_display = ("mensalista", "dt_pgto", "total")
 
 
 
@@ -21,3 +27,4 @@ admin.site.register(Pessoa)
 admin.site.register(Parametros)
 admin.site.register(MovRotativo, MovRotativoAdmin)
 admin.site.register(Mensalista)
+admin.site.register(MovMensalista, MovMensalistaAdmin)
