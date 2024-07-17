@@ -5,3 +5,15 @@
         <li>{{ pessoa.nome }}</li>
     {% endfor %}
 </ul>
+
+
+<form action="{% url 'core:core_pessoa_novo' %}" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Cadastrar</button>    
+</form>
+
+
+
