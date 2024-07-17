@@ -5,3 +5,11 @@
         <li>{{ mov.mensalista }} - {{ mov.dt_pagto }}</li>
     {% endfor %}
 </ul>
+
+<form action="{% url 'core:core_movmensalista_novo' %}" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Cadastrar</button>
+</form>
