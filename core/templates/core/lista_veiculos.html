@@ -3,7 +3,8 @@
 <ul>
     {% for veiculo in veiculos %}
         <li>
-            <a href="{% url 'core:core_veiculo_update' veiculo.id %}">{{ veiculo.placa }}</a>
+            <a href="{% url 'core:core_veiculo_update' veiculo.id %}">
+                {{ veiculo.placa }}</a>
         </li>
     {% endfor %}
 </ul>
