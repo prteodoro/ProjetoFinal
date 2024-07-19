@@ -165,7 +165,7 @@ def mensalista_update(request, id):
             return redirect(reverse("core:core_lista_mensalistas"))
     else:
         return render(request, "core/update_mensalista.html", data)
-    
+
 
 def mensalista_delete(request, id):
     mensalista = Mensalista.objects.get(id=id)
@@ -204,3 +204,12 @@ def movmensalista_update(request, id):
             return redirect(reverse("core:core_lista_movmensalistas"))
     else:
         return render(request, "core/update_movmensalista.html", data)
+
+
+def movmensalista_delete(request, id):
+    mov_mensalista = MovMensalista.objects.get(id=id)
+    if request.method == "POST":
+        mov_mensalista.delete()
+        return redirect(reverse("core:core_lista_movmensalistas"))
+    else:
+        return render(request, "core/delete_confirm.html", {"obj": mov_mensalista})
