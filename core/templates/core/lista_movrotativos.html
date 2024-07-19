@@ -4,7 +4,8 @@
     {% for mov in mov_rot %}
         <li>
             <a href="{% url 'core:core_movrotativos_update' mov.id %}">
-                {{ mov.checkin }} - {{ mov.veiculo.placa }}</a>
+                {{ mov.checkin }} - {{ mov.veiculo.placa }}
+            </a>
         </li>
     {% endfor %}
 </ul>
