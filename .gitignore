@@ -1,1 +1,3 @@
 project-projetoFinal
+*.sqlite3
+*pyc

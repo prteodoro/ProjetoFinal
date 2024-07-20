@@ -58,7 +58,6 @@ urlpatterns = [
          name="core_movmensalista_novo"),
     path("movmensal-update/<int:id>/", movmensalista_update,
          name="core_movmensalista_update"),
-
     path("mov-mensal-delete/<int:id>/", movmensalista_delete,
          name="core_movmensalista_delete"),
 ]
