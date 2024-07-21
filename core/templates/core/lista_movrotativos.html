@@ -1,19 +1,36 @@
-<h2>Lista Movimentos Rotativos</h2>
+{% extends "base.html" %}
+{% load bootstrap %}
 
-<ul>
-    {% for mov in mov_rot %}
-        <li>
-            <a href="{% url 'core:core_movrotativos_update' mov.id %}">
-                {{ mov.checkin }} - {{ mov.veiculo.placa }}
-            </a>
-        </li>
-    {% endfor %}
-</ul>
+{% block main %}
 
-<form action="{% url 'core:core_movrotativos_novo' %}" method="POST">
-    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+            <h2>Lista Movimentos Rotativos</h2>
+        </div>
+    </div>
 
-    {{ form.as_p }}
+    <div class="row">
+        <div class="col-sm-6">
+            <form action="{% url 'core:core_movrotativos_novo' %}" method="POST">
+                {% csrf_token %}
+        
+                {{ form|bootstrap }}
+        
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+        
+        <div class="col-sm-6">
+            <ul>
+                {% for mov in mov_rot %}
+                    <li>
+                        <a href="{% url 'core:core_movrotativos_update' mov.id %}">
+                            {{ mov.checkin }} - {{ mov.veiculo.placa }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
-    <button type="submit">Cadastrar</button>
-</form>
+{% endblock main %}
