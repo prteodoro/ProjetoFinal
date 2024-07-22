@@ -48,6 +48,7 @@ class MovRotativo(models.Model):
     veiculo = models.ForeignKey(Veiculo, on_delete=models.CASCADE)
     pago = models.BooleanField(default=False)
 
+
     def horas_total(self):
         return math.ceil((self.checkout - self.checkin).total_seconds() / 3600)
 
@@ -79,4 +80,3 @@ class MovMensalista(models.Model):
 
     def __str__(self):
         return str(self.mensalista) + " - " + str(self.total)
-    
