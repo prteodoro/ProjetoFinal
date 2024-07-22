@@ -18,8 +18,8 @@ from .forms import (
 
 
 def home(request):
-    context = {"mensagem": "Ola mundo"}
-    return render(request, "base.html", context)
+    context = {"mensagem": "Seja bem vindo ao sistema"}
+    return render(request, "core/index.html", context)
 
 
 def lista_pessoas(request):
