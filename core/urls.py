@@ -22,6 +22,7 @@ from .views import (
     movrotativos_delete,
     mensalista_delete,
     movmensalista_delete,
+    logout_user,
     )
 
 
@@ -60,4 +61,6 @@ urlpatterns = [
          name="core_movmensalista_update"),
     path("mov-mensal-delete/<int:id>/", movmensalista_delete,
          name="core_movmensalista_delete"),
+
+    path("logout/", logout_user, name="logout"),
 ]

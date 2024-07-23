@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, logout
+from django.contrib import messages
 from django.urls import reverse
 from .models import (
     Pessoa,
@@ -213,3 +215,9 @@ def movmensalista_delete(request, id):
         return redirect(reverse("core:core_lista_movmensalistas"))
     else:
         return render(request, "core/delete_confirm.html", {"obj": mov_mensalista})
+
+
+def logout_user(request):
+    logout(request)
+    messages.success(request,("You have been logged out... Thanks for stopping by..."))
+    return redirect("core:core_home")
