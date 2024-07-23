@@ -1,5 +1,53 @@
 {% extends "website/base.html" %}
+{% load static %}
 
 {% block main %}
-<h1>Seja bem vindo ao website</h1>
+    <div class="row">
+        <div class="col-6">
+            <h1>Estacionamento 24 Horas</h1>
+            <span>Slogan da empresa aqui</span>
+        </div>
+        <div class="col-6 img-right">
+            <img src="{% static 'img/logo.png' %}" alt="Estacionamento 24 horas">
+        </div>
+    </div>
+
+    {% include "website/menu.html" %}
+
+    <div class="row row-space">
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facere fuga dolore ut accusantium totam laudantium ipsa suscipit nobis fugiat repellat at voluptatem tempora, quo, cupiditate, corrupti repellendus sed et.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus magni aperiam autem sequi incidunt obcaecati dicta enim, pariatur earum odit libero voluptatum nulla error harum totam nemo quaerat, minima quod!
+        </div>
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi explicabo non totam modi? Dolorem dolor mollitia impedit necessitatibus, est totam at eaque quod voluptatum consequuntur temporibus laboriosam officiis perspiciatis consequatur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus est quibusdam ipsa. Est aliquid voluptas sint recusandae nobis accusantium quo numquam voluptate. Nemo ducimus eum quisquam maiores voluptates dolorum laborum?
+        </div>
+    </div>
+
+    <div class="row row-space">
+        <div class="col-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum totam excepturi cupiditate atque assumenda architecto sit ratione mollitia temporibus optio illo dicta fugiat blanditiis porro, magni, deserunt repellat veniam odio?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nihil eum libero nisi non quasi soluta at error tempore, praesentium molestias odit alias delectus. Debitis soluta ipsum vero explicabo praesentium?
+        </div>
+        <div class="col-4 img-website">
+            <img src="{% static 'img/parking.png' %}" alt="Estacionamento 24 horas">
+        </div>
+        <div class="col-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa odio, blanditiis beatae saepe quasi quaerat suscipit. Animi fugit, iste odit sequi, modi, aperiam adipisci vero inventore repellat sed rem consequatur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A nemo quam soluta doloribus minima neque at natus nostrum culpa? Aspernatur reprehenderit, nisi impedit sequi facilis fugiat ut maiores? Nihil, tenetur?
+        </div>
+    </div>
+
+    <div class="row row-space">
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque rem nostrum ea modi in ab dolorem, soluta cupiditate. Rerum, placeat sit. Adipisci, aperiam nam provident consequuntur minus mollitia nesciunt sint!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, dolor debitis accusantium architecto necessitatibus adipisci provident, rem nisi sint eaque reiciendis sapiente, ducimus officia atque ut. Eos delectus a minus.
+        </div>
+        <div class="col-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum similique impedit modi nisi fugit beatae! Aspernatur magni quae sunt commodi quos eum a nihil! Et at nemo tempore blanditiis!
+        </div>
+    </div>
+
+    {% include "website/footer.html" %}
 {% endblock main %}

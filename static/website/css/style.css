@@ -1,0 +1,17 @@
+.footer-website {
+    bottom: 0;
+    position: absolute;
+    color: blueviolet;
+}
+
+.row-space {
+    margin-top: 25px;
+}
+
+.img-website {
+    text-align: center;
+}
+
+.img-right {
+    text-align: right;    
+}
