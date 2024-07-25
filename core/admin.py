@@ -12,13 +12,11 @@ from .models import (
 
 class MovRotativoAdmin(admin.ModelAdmin):
     list_display = (
-        "checkin", "checkout", "valor_hora", "veiculo", "horas_total", "total", "pago")
-    
+        "checkin", "checkout", "valor_hora", "veiculo", "horas_total", "total", "pago")    
 
 
 class MovMensalistaAdmin(admin.ModelAdmin):
     list_display = ("mensalista", "dt_pgto", "total")
-
 
 
 admin.site.register(Marca)

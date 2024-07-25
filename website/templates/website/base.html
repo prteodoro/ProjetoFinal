@@ -9,12 +9,25 @@
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
     <title>Website - Estacionamento</title>
 </head>
-<body>
-    
+<body>    
     <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Estacionamento 24 Horas</h1>
+                <span>Security in first time</span>
+            </div>
+            <div class="col-6 img-right">
+                <img src="{% static 'img/logo.png' %}" alt="Estacionamento 24 horas">
+            </div>
+        </div>
+
+        {% include "website/menu.html" %}
+
         {% block main %}
         {% endblock main %}
-    </div>
 
+        {% include "website/footer.html" %}
+        
+    </div>
 </body>
 </html>
